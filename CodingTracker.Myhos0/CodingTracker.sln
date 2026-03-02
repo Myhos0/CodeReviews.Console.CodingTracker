@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingTracker", "CodingTracker.csproj", "{D1093329-212F-4AD4-8E23-F9DF267975BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1093329-212F-4AD4-8E23-F9DF267975BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1093329-212F-4AD4-8E23-F9DF267975BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1093329-212F-4AD4-8E23-F9DF267975BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1093329-212F-4AD4-8E23-F9DF267975BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0DDC3C3-3173-45C0-9928-D4CDAFE4E300}
+	EndGlobalSection
+EndGlobal
