@@ -8,7 +8,7 @@ internal class Stopwatch
     private readonly CodingSessionRepository codingSessionRepository;
     private DateTime? startDateTime;
     private bool running;
-    private bool alreadySaved = false;
+    private bool alreadySaved;
 
     public Stopwatch(DataBase dataBase) 
     {
