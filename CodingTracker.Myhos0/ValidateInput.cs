@@ -28,7 +28,7 @@ internal class ValidateInput
         }
     }
 
-    internal string ValidateTime(string message)
+    internal string ValidateTime(string message,bool isEndTime)
     {
         string[] timeFormat = { @"hh\:mm", @"hh\:mm\:ss" };
 
@@ -37,9 +37,14 @@ internal class ValidateInput
             AnsiConsole.MarkupLine(message);
             string input = Console.ReadLine()?.Trim() ?? "";
 
-            if (string.Equals(input, "C", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(input, "C", StringComparison.OrdinalIgnoreCase) && !isEndTime)
             {
                 return DateTime.Now.ToString(@"hh\:mm\:ss");
+            }
+            
+            if(string.Equals(input, "C", StringComparison.OrdinalIgnoreCase) && isEndTime)
+            {
+                return DateTime.Now.AddHours(1).ToString(@"hh\:mm\:ss"); ; 
             }
 
             if (input == "0") return "0";
@@ -78,19 +83,17 @@ internal class ValidateInput
     {
         while (true)
         {
-            string endTime = ValidateTime(endTimeMessage);
+            string endTime = ValidateTime(endTimeMessage,true);
 
             TimeSpan duration = TimeSpan.Parse(endTime) - TimeSpan.Parse(startTime);
 
 
-            if (duration <= TimeSpan.Parse(minimumDuration))
+            if (duration >= TimeSpan.Parse(minimumDuration) && TimeSpan.Parse(endTime) >= TimeSpan.Parse(startTime))
             {
-                TimeSpan newEndTime = TimeSpan.Parse(endTime) + TimeSpan.Parse(minimumDuration);
-
-                return newEndTime.ToString();
+                return endTime.ToString();
             }
 
-            endTimeMessage = "The end time cannot be the same as or earlier than the start time.";
+            endTimeMessage = "The end time cannot be the same as or earlier than the start time, please insert new one or [#75C9C8]C[/] to insert current time plus one hour.";
         }
     }
 

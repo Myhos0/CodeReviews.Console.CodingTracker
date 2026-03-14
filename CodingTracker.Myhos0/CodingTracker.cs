@@ -219,7 +219,7 @@ internal class CodingTracker
         string minimumDuration = TimeSpan.FromHours(1).ToString();
 
         string date = validateInput.ValidateDate(dateMessage);
-        string startTime = validateInput.ValidateTime(startTimeMessage);
+        string startTime = validateInput.ValidateTime(startTimeMessage,false);
         string endTime = validateInput.ValidateEndTime(startTime, endTimeMessage,minimumDuration);
 
         TimeSpan calculateDuration = TimeSpan.Parse(endTime) - TimeSpan.Parse(startTime);
