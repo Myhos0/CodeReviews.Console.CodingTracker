@@ -35,9 +35,7 @@ internal class CodingSessionRepository
         int rows = connection.Execute(SQL, new { Id = id });
 
         if (rows == 0)
-        {
             throw new Exception("No records Found.");
-        }
     }
 
     public void Update(CodingSession session)
