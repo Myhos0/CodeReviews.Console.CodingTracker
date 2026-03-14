@@ -1,7 +1,4 @@
-﻿using CodingTrackerProgram;
-using Spectre.Console;
-using System;
-
+﻿
 namespace CodingTrackerProgram;
 
 internal class CodingSessionSeeder

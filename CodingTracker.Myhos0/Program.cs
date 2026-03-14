@@ -1,6 +1,5 @@
 ﻿using CodingTrackerProgram;
 using Microsoft.Extensions.Configuration;
-using Spectre.Console;
 
 class Program 
 {
