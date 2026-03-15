@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.Sqlite;
 
 namespace CodingTrackerProgram;
 
@@ -11,7 +11,7 @@ internal class DataBase
         _connectionString = connectionString;
     }
 
-    public SqlConnection GetConnection() => new(_connectionString);
+    public SqliteConnection GetConnection() => new(_connectionString);
 
     internal void CreateTable() 
     {
